@@ -1,0 +1,21 @@
+[
+    {
+      "title": "KASA",
+      "description": "This is a description for project one.",
+      "image": "https://via.placeholder.com/300",
+      "link": "#"
+    },
+    {
+      "title": "Project Two",
+      "description": "This is a description for project two.",
+      "image": "https://via.placeholder.com/300",
+      "link": "#"
+    },
+    {
+      "title": "Project Three",
+      "description": "This is a description for project three.",
+      "image": "https://via.placeholder.com/300",
+      "link": "#"
+    }
+    
+  ]
