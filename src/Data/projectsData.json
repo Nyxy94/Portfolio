@@ -1,21 +1,29 @@
 [
-    {
-      "title": "KASA",
-      "description": "This is a description for project one.",
-      "image": "https://via.placeholder.com/300",
-      "link": "#"
-    },
-    {
-      "title": "Project Two",
-      "description": "This is a description for project two.",
-      "image": "https://via.placeholder.com/300",
-      "link": "#"
-    },
-    {
-      "title": "Project Three",
-      "description": "This is a description for project three.",
-      "image": "https://via.placeholder.com/300",
-      "link": "#"
-    }
+  {
+    "image": "../../../public/kasa.png",
+    "title": "KASA",
+    "description": "Premier projet React, démarré rapidement avec Vite comme bundle. J'ai intégré les conceptions depuis une maquette Figma, composants réutilisables avec des props",
+    "technologies": [
+      { "name": "React", "icon": "faReact" },
+      { "name": "SEO", "icon": "faSearch" },
+      { "name": "Figma", "icon": "faFileAlt" },
+      { "name": "GitHub", "icon": "faGithub" },
+      { "name": "SASS", "icon": "faSass" },
+      { "name": "HTML", "icon": "faHtml5" }
+    ],
+     "githubLink": "https://github.com/Nyxy94/kasa"
     
-  ]
+  },
+  {
+    "image": "path/to/your/image2.jpg",
+    "title": "Project 2",
+    "description": "Description of project 2.",
+    "technologies": [
+      { "name": "React", "icon": "faReact" },
+      { "name": "JavaScript", "icon": "faJs" },
+      { "name": "HTML5", "icon": "faHtml5" },
+      { "name": "CSS3", "icon": "faCss3Alt" }
+    ]
+  }
+  
+]

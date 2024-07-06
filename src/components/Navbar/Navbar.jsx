@@ -1,5 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -13,28 +14,42 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false); // Ferme le menu hamburger après le défilement
-    }
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="#home" onClick={() => scrollToSection('home')}>JLeblanc</a>
+        <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
+          JLeblanc
+        </Link>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </div>
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        <li><a href="#home" onClick={() => scrollToSection('home')}>Acceuil</a></li>
-        <li><a href="#about" onClick={() => scrollToSection('about')}>A propos</a></li>
-        <li><a href="#skills" onClick={() => scrollToSection('skills')}>Compétences</a></li>
-        <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projets</a></li>
-        <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+        <li>
+          <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
+            Acceuil
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} duration={500} onClick={closeMenu}>
+            A propos
+          </Link>
+        </li>
+        <li>
+          <Link to="skills" smooth={true} duration={500} onClick={closeMenu}>
+            Compétences
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} duration={500} onClick={closeMenu}>
+            Projets
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500} onClick={closeMenu}>
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );
