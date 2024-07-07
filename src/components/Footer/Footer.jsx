@@ -11,12 +11,10 @@ const Footer = () => {
         <a href="https://github.com/Nyxy94" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/jordan-leblanc-098481293/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a href="https://codepen.io/your-profile" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faCodepen} />
-        </a>
+        
       </div>
       <p>© 2024 Leblanc Jordane. Tous droits réservés.</p>
     </footer>

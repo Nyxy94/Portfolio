@@ -1,14 +1,26 @@
-// src/components/Projects.js
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJs, faHtml5, faCss3Alt, faGithub, faSass } from '@fortawesome/free-brands-svg-icons';
-import { faSearch, faFileAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './Projects.scss';
 import projectData from '../../Data/projectsData.json';
 
-library.add(faReact, faJs, faHtml5, faCss3Alt, faSearch, faFileAlt, faGithub, faSass, faExternalLinkAlt);
+// Import des images SVG ou PNG des technologies
+import reactIcon from '../../assets/icons/react.svg';
+import jsIcon from '../../assets/icons/js.svg';
+import html5Icon from '../../assets/icons/html5.svg';
+import sassIcon from '../../assets/icons/sass.svg';
+import mongodbIcon from '../../assets/icons/mongoDB.svg';
+import reduxIcon from '../../assets/icons/redux.svg';
+import swaggerIcon from '../../assets/icons/swagger.svg';
+import nodejsIcon from '../../assets/icons/nodejs.svg';
+import githubIcon from '../../assets/icons/github.svg'
+import seoIcon from '../../assets/icons/seo.svg'
+import figmaIcon from '../../assets/icons/figma.svg'
+
+library.add(faGithub, faExternalLinkAlt);
 
 Modal.setAppElement('#root');
 
@@ -23,24 +35,28 @@ const Projects = () => {
 
   const getIcon = (iconName) => {
     switch (iconName) {
-      case 'faReact':
-        return faReact;
-      case 'faJs':
-        return faJs;
-      case 'faHtml5':
-        return faHtml5;
-      case 'faCss3Alt':
-        return faCss3Alt;
-      case 'faSearch':
-        return faSearch;
-      case 'faFileAlt':
-        return faFileAlt;
-      case 'faGithub':
-        return faGithub;
-      case 'faSass':
-        return faSass;
-      case 'faExternalLinkAlt':
-        return faExternalLinkAlt;
+      case 'react.svg':
+        return reactIcon;
+      case 'js.svg':
+        return jsIcon;
+      case 'html5.svg':
+        return html5Icon;
+      case 'sass.svg':
+        return sassIcon;
+      case 'mongoDB.svg':
+        return mongodbIcon;
+      case 'redux.svg':
+        return reduxIcon;
+      case 'swagger.svg':
+        return swaggerIcon;
+      case 'nodejs.svg':
+        return nodejsIcon;
+      case 'github.svg' :
+        return githubIcon;
+      case 'seo.svg' :
+        return seoIcon;
+      case 'figma.svg' :
+        return figmaIcon;
       default:
         return null;
     }
@@ -57,7 +73,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects container">
+    <section id="projects" className="projects">
       <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
@@ -80,12 +96,13 @@ const Projects = () => {
           <p>{selectedProject.description}</p>
           <div className="technologies">
             {selectedProject.technologies.map((tech, index) => (
-              <FontAwesomeIcon key={index} icon={getIcon(tech.icon)} title={tech.name} />
+              <img key={index} src={getIcon(tech.icon)} alt={tech.name} title={tech.name} className="technology-icon" />
             ))}
           </div>
+          <div className="divider"></div>
           <div className="links">
             <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} /> GitHub
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             {selectedProject.liveLink && (
               <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer">

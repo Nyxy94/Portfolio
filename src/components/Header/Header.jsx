@@ -2,9 +2,8 @@
 import React from 'react';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'; 
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import bannerImage from "../../../public/blu.jpg"
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; 
+import bannerImage from "/blu.webp"
 import ScrollArrow from '../ScrollArrow/ScrollArrow';
 const Header = () => {
   const scrollToAbout = () => {
@@ -21,11 +20,8 @@ const Header = () => {
             <a href="https://github.com/Nyxy94" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/jordan-leblanc-098481293/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
             </a>
           </div>
           <ScrollArrow direction="down" targetId="about" alwaysVisible={true} />

@@ -1,7 +1,7 @@
-// src/components/Projects.scss
 .projects {
   text-align: center;
   padding: 4rem 2rem;
+  background-color: #1f1f1f;
 
   h2 {
     font-size: 2.5rem;
@@ -13,19 +13,35 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
 
     .project {
-      img {
-        width: 100%;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        &:hover {
-          transform: scale(1.05);
-        }
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
       }
     }
   }
@@ -61,6 +77,11 @@
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      top: 2px;
+      right: -2px;
+    }
 
     &:hover {
       color: #ff6347;
@@ -76,6 +97,8 @@
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-family: "Permanent Marker";
+    font-weight: 400;
   }
 
   p {
@@ -91,6 +114,11 @@
     font-size: 2rem;
     margin-bottom: 1rem;
 
+    .technology-icon {
+      width: 40px;
+      height: 40px;
+    }
+
     svg {
       color: #fff;
       transition: color 0.3s ease;
@@ -99,6 +127,13 @@
         color: #ff6347;
       }
     }
+  }
+
+  .divider {
+    width: 500px; /* Ajustez cette valeur pour rendre la ligne plus grande ou plus petite */
+    height: 1px;
+    background-color: #61dbfb; /* Utilisez la couleur de votre choix */
+    margin: 1.5rem 0;
   }
 
   .links {
@@ -112,15 +147,39 @@
       color: #fff;
       text-decoration: none;
       font-size: 1rem;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
 
       &:hover {
         color: #ff6347;
+        transform: scale(1.2);
       }
 
       svg {
         margin-right: 0.5rem;
+        font-size: 2.5rem;
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    max-width: 90%;
+    width: 95%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+    .technologies {
+      font-size: 1.5rem;
+    }
+    .links {
+      font-size: 0.875rem;
+    }
+    .divider {
+      width: 70%; /* Réduisez la largeur pour les petits écrans */
+      margin: 1rem 0;
     }
   }
 }
