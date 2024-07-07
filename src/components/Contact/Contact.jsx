@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <h2>Contact</h2>
-      <form className="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+      <form className="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" >
         <input type="hidden" name="form-name" value="contact" />
         <div style={{ display: 'none' }}>
           <label>
