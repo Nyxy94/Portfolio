@@ -1,18 +1,11 @@
 import React from 'react';
 import './Contact.scss';
 
-
-
-
-
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   return (
     <section id="contact" className="contact ">
       <h2>Contact</h2>
-      <form className="contact-form" name="contact" netlify netlify-honeypot="bot-field" >
+      <form className="contact-form" name="contact" netlify method="POST"  >
         <div className="form-group">
           <label htmlFor="name">Nom</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -25,7 +18,7 @@ const Contact = () => {
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" placeholder="Your message..." required></textarea>
         </div>
-        <button type="submit" className="submit-btn" onClick={handleSubmit}>Envoyer</button>
+        <button type="submit" className="submit-btn">Envoyer</button>
       </form>
     </section>
   );
