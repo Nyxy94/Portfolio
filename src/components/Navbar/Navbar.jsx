@@ -27,7 +27,7 @@ const Navbar = () => {
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
           <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
-            Acceuil
+            Accueil
           </Link>
         </li>
         <li>

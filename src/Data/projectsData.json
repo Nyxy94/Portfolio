@@ -2,7 +2,7 @@
   {
     "image": "/kasa.webp",
     "title": "KASA",
-    "description": "Premier projet React, démarré rapidement avec Vite comme bundle. J'ai intégré les conceptions depuis une maquette Figma, composants réutilisables avec des props",
+    "description": "Premier projet React, démarré rapidement avec Vite comme bundle. J'ai intégré les conceptions depuis une maquette Figma, composants réutilisables avec des props.",
     "technologies": [
       { "name": "React", "icon": "react.svg" },
       { "name": "SEO", "icon": "seo.svg" },
@@ -31,7 +31,7 @@
   {
     "image": "/sophie.webp",
     "title": "Sophie Bluel",
-    "description": "Le projet Javascript de la formation que j'ai le plus apprécié impliquait l'intégration à partir de maquettes figma, des appels à l'API pour la connexion de l'utilisateur, ainsi que la création d'un espace admin où l'administrateur pouvait ajouter ou supprimer un projet.",
+    "description": "Le projet Javascript de la formation que j'ai le plus apprécié impliquait l'intégration à partir de maquettes Figma, des appels à l'API pour la connexion de l'utilisateur, ainsi que la création d'un espace admin où l'administrateur pouvait ajouter ou supprimer un projet.",
     "technologies": [
       { "name": "JavaScript", "icon": "js.svg" },
       { "name": "Swagger", "icon": "swagger.svg" },
