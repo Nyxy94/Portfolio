@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact ">
       <h2>Contact</h2>
-      <form className="contact-form" method="post" data-netlify="true">
+      <form className="contact-form" method="post" action="/" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <div className="form-group">
           <label htmlFor="name">Nom</label>
