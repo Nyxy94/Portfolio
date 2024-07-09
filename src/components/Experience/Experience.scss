@@ -1,0 +1,95 @@
+// src/components/Experience.scss
+.experience {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 4rem 2rem;
+  
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .experience-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 1440px;
+      margin: 0 auto;
+  
+      .experience-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #444;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+  
+        .experience-details {
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1rem;
+  
+            i {
+              color: #61dbfb;
+            }
+          }
+        }
+  
+        .experience-meta {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+  
+          .type {
+            background-color: #61dbfb;
+            color: #1f1f1f;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+          }
+  
+          .duration {
+            font-size: 0.875rem;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .experience-container {
+        max-width: 960px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .experience-container {
+        max-width: 720px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .experience-container {
+        max-width: 480px;
+  
+        .experience-item {
+          flex-direction: column;
+          align-items: flex-start;
+  
+          .experience-meta {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
