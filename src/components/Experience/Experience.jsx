@@ -1,4 +1,3 @@
-// src/components/Experience.js
 import React, { useEffect, useState } from 'react';
 import './Experience.scss';
 import experienceData from '../../Data/experienceData.json';

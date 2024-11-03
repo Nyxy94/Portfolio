@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from 'react';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,9 +5,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import bannerImage from "/blu.webp"
 import ScrollArrow from '../ScrollArrow/ScrollArrow';
 const Header = () => {
-  const scrollToAbout = () => {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-  };
+  
 
   return (
     <header  id="home" className="header">
